@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Daon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MRZ PARSER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kn3-aV-IBr">
+                                <rect key="frame" x="67" y="50" width="241" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="5T1-8R-w1y"/>
+                                    <constraint firstAttribute="width" constant="241" id="oHv-PA-CE9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBV-1d-mdk">
+                                <rect key="frame" x="67" y="204" width="241" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="TyG-Lu-mZd"/>
+                                    <constraint firstAttribute="height" constant="38" id="liU-6V-omb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter MRZ Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWc-na-pxB">
+                                <rect key="frame" x="67" y="128" width="241" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="bSK-YS-dGR"/>
+                                    <constraint firstAttribute="height" constant="30" id="eB5-pC-o3U"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plw-nG-0K4">
+                                <rect key="frame" x="121" y="294" width="134" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4XB-gi-ub8"/>
+                                    <constraint firstAttribute="width" constant="134" id="gzK-oc-HXK"/>
+                                </constraints>
+                                <state key="normal" title="Parse MRZ"/>
+                                <connections>
+                                    <action selector="mrzParseButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hAM-w2-AOa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oBV-1d-mdk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="46m-Rg-oRe"/>
+                            <constraint firstItem="kn3-aV-IBr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="4GX-a1-g0a"/>
+                            <constraint firstItem="plw-nG-0K4" firstAttribute="top" secondItem="oBV-1d-mdk" secondAttribute="bottom" constant="52" id="6jP-Rj-EBp"/>
+                            <constraint firstItem="kn3-aV-IBr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="IFG-OQ-ypj"/>
+                            <constraint firstItem="IWc-na-pxB" firstAttribute="top" secondItem="kn3-aV-IBr" secondAttribute="bottom" constant="47" id="RAx-8i-wZz"/>
+                            <constraint firstItem="plw-nG-0K4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="cjT-r5-VpH"/>
+                            <constraint firstItem="IWc-na-pxB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="sKN-fT-cKN"/>
+                            <constraint firstItem="oBV-1d-mdk" firstAttribute="top" secondItem="IWc-na-pxB" secondAttribute="bottom" constant="46" id="wuO-04-92o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mrzParsedNameLabel" destination="oBV-1d-mdk" id="z4a-Ya-qLo"/>
+                        <outlet property="mrzTextField" destination="IWc-na-pxB" id="nDx-xn-eyF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="108"/>
+        </scene>
+    </scenes>
+</document>
